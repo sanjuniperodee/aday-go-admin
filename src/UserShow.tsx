@@ -8,7 +8,7 @@ import {
 export const UserShow = (props) => (
     <Show {...props}>
         <SimpleShowLayout>
-            {/*<TextField source="id" label="ID" />*/}
+            <TextField source="id" label="ID" />
             <TextField source="phone" label="Телефон" />
             <TextField source="firstName" label="Имя" />
             <TextField source="lastName" label="Фамилия" />
