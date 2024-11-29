@@ -32,7 +32,7 @@ const OrderRequestFilter = (props) => (
 export const OrderRequestList = (props) => (
     <List filters={<OrderRequestFilter />} {...props}>
         <Datagrid rowClick="show">
-            <TextField source="id" label="ID" />
+            {/*<TextField source="id" label="ID" />*/}
 
             {/* Reference to Driver */}
             <ReferenceField
@@ -59,12 +59,12 @@ export const OrderRequestList = (props) => (
             <TextField source="to" label="Куда" />
             <TextField source="startTime" label="Время начала" />
             <TextField source="arrivalTime" label="Время прибытия" />
-            <TextField source="lat" label="Широта" />
-            <TextField source="lng" label="Долгота" />
+            {/*<TextField source="lat" label="Широта" />*/}
+            {/*<TextField source="lng" label="Долгота" />*/}
             <TextField source="price" label="Цена" />
             <TextField source="comment" label="Комментарий" />
             <TextField source="createdAt" label="Создано" />
-            <TextField source="updatedAt" label="Обновлено" />
+            {/*<TextField source="updatedAt" label="Обновлено" />*/}
             <TextField source="orderStatus" label="Статус заказа" />
             <TextField source="rating" label="Рейтинг" />
         </Datagrid>
