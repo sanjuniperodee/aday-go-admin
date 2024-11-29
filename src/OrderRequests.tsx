@@ -14,7 +14,8 @@ const orderStatusChoices = [
     { id: 'WAITING', name: 'В ожидании' },
     { id: 'ONGOING', name: 'В процессе' },
     { id: 'COMPLETED', name: 'Завершен' },
-    { id: 'REJECTED', name: 'Отклонен' },
+    { id: 'REJECTED', name: 'Отклонен водителем' },
+    { id: 'REJECTED_BY_CLIENT', name: 'Отклонен клиентом' },
 ];
 
 // Define the filter component
