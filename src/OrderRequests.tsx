@@ -54,7 +54,7 @@ export const OrderRequestList = (props) => (
                 <TextField source="firstName" />
             </ReferenceField>
 
-            <TextField source="orderType" label="Тип заказа" />
+            {/*<TextField source="orderType" label="Тип заказа" />*/}
             <TextField source="from" label="Откуда" />
             <TextField source="to" label="Куда" />
             <TextField source="startTime" label="Время начала" />
