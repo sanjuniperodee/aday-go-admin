@@ -3,7 +3,7 @@ import {
     Datagrid,
     TextField,
     DateField,
-    ShowButton, Filter, SelectInput,
+    ShowButton, Filter, SelectInput, NumberInput, TextInput,
 } from 'react-admin';
 
 const orderStatusChoices = [
@@ -29,6 +29,9 @@ const OrderRequestFilter = (props) => (
             choices={orderStatusChoices}
             alwaysOn
         />
+        <TextInput label="Номер телефона"
+                     source="phone"
+        alwaysOn/>
         <SelectInput
             label="Тип заказа"
             source="orderType"
