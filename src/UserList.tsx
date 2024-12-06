@@ -15,12 +15,24 @@ const orderStatusChoices = [
     { id: 'REJECTED', name: 'Отклонен водителем' },
     { id: 'REJECTED_BY_CLIENT', name: 'Отклонен клиентом' },
 ];
+const orderTypeChoices = [
+    { id: 'TAXI', name: 'Такси' },
+    { id: 'CARGO', name: 'Груз' },
+    { id: 'INTERCITY', name: 'Межгород' },
+    { id: 'DELIVERY', name: 'Доставка' },
+];
 const OrderRequestFilter = (props) => (
     <Filter {...props}>
         <SelectInput
             label="Статус заказа"
             source="orderStatus"
             choices={orderStatusChoices}
+            alwaysOn
+        />
+        <SelectInput
+            label="Тип заказа"
+            source="orderType"
+            choices={orderTypeChoices}
             alwaysOn
         />
     </Filter>
