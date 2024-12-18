@@ -15,6 +15,7 @@ export const App = () => (
         <Resource name="taxi" options={{ label: 'Такси' }} list={OrderRequestList} show={OrderShow}/>
         <Resource name="cargo" options={{ label: 'Грузоперевозки' }} list={OrderRequestList} show={OrderShow}/>
         <Resource name="intercity" options={{ label: 'Межгород' }} list={OrderRequestList} show={OrderShow}/>
+        <Resource name="delivery" options={{ label: 'Доставка' }} list={OrderRequestList} show={OrderShow}/>
         <Resource name="drivers" options={{ label: 'Водители' }} list={UserList} show={UserShow}/>
         <Resource name="clients" options={{ label: 'Клиенты' }} list={ClientList} show={ClientShow}/>
     </Admin>

@@ -30,6 +30,8 @@ const dataProvider = {
             filter.orderType = 'CARGO';
         } else if (resource === 'intercity') {
             filter.orderType = 'INTERCITY';
+        } else if (resource === 'delivery') {
+            filter.orderType = 'DELIVERY';
         } else {
             // If it's not one of the custom resources, use the resource name as is
             actualResource = resource;
