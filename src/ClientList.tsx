@@ -40,12 +40,12 @@ const OrderRequestFilter = (props) => (
         />
     </Filter>
 );
-export const UserList = (props) => (
+export const ClientList = (props) => (
     <List filters={<OrderRequestFilter />} {...props}>
         <Datagrid rowClick="show">
             {/*<TextField source="id" label="ID" />*/}
             <TextField source="phone" label="Телефон" />
-            <TextField source="orders_as_driver.length" label="Заказы" />
+            <TextField source="orders.length" label="Заказы" />
             <TextField source="firstName" label="Имя" />
             <TextField source="lastName" label="Фамилия" />
             {/*<TextField source="middleName" label="Отчество" />*/}

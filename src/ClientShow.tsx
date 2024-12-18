@@ -8,10 +8,46 @@ import {
     Datagrid,
     ReferenceManyField,
     NumberField,
-    ChipField, ReferenceField,
+    ChipField,
+    Filter,
+    TextInput,
+    SelectInput, ReferenceField,
 } from 'react-admin';
+const orderStatusChoices = [
+    { id: 'CREATED', name: 'Создан' },
+    { id: 'STARTED', name: 'Начат' },
+    { id: 'WAITING', name: 'В ожидании' },
+    { id: 'ONGOING', name: 'В процессе' },
+    { id: 'COMPLETED', name: 'Завершен' },
+    { id: 'REJECTED', name: 'Отклонен водителем' },
+    { id: 'REJECTED_BY_CLIENT', name: 'Отклонен клиентом' },
+];
+// Define the filter for order type
+const OrderFilter = (props) => (
+    <Filter {...props}>
+        <SelectInput
+            label="Тип заказа"
+            source="orderType"
+            choices={[
+                { id: 'DELIVERY', name: 'Доставка' },
+                { id: 'TAXI', name: 'Такси' },
+                { id: 'MOVING', name: 'Переезд' },
+            ]}
+        />
+    </Filter>
+);
+const OrderRequestFilter = (props) => (
+    <Filter {...props}>
+        <SelectInput
+            label="Статус заказа"
+            source="orderStatus"
+            choices={orderStatusChoices}
+            alwaysOn
+        />
+    </Filter>
+);
 
-export const UserShow = (props) => (
+export const ClientShow = (props) => (
     <Show {...props}>
         <TabbedShowLayout>
             {/* General User Information Tab */}
