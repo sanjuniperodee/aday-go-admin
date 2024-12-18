@@ -4,7 +4,7 @@ import {
     TextField,
     ReferenceField,
     SelectInput,
-    Filter
+    Filter, DateField
 } from 'react-admin';
 
 // Define choices for OrderStatus
@@ -58,13 +58,13 @@ export const OrderRequestList = (props) => (
             {/*<TextField source="orderType" label="Тип заказа" />*/}
             <TextField source="from" label="Откуда" />
             <TextField source="to" label="Куда" />
-            <TextField source="startTime" label="Время начала" />
-            <TextField source="arrivalTime" label="Время прибытия" />
+            <DateField source="startTime" label="Время начала" />
+            <DateField source="arrivalTime" label="Время прибытия" />
             {/*<TextField source="lat" label="Широта" />*/}
             {/*<TextField source="lng" label="Долгота" />*/}
             <TextField source="price" label="Цена" />
             <TextField source="comment" label="Комментарий" />
-            <TextField source="createdAt" label="Создано" />
+            <DateField source="createdAt" label="Создано" />
             {/*<TextField source="updatedAt" label="Обновлено" />*/}
             <TextField source="orderStatus" label="Статус заказа" />
             <TextField source="rating" label="Рейтинг" />
